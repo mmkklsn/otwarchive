@@ -1,5 +1,5 @@
 <!--Descriptive page name, messages and instructions-->
-<h2 class="heading"><%= ts("Report Abuse") %></h2>
+<h2 class="heading"><%= ts("Contact Policy and Abuse") %></h2>
 <%= error_messages_for :abuse_report %>
 <!--/descriptions-->
 
@@ -8,7 +8,7 @@
 
 <!--main content-->
 <div class="userstuff">
-  <p><%= ts('The Abuse committee looks after all of your concerns regarding content and user behavior which breach the
+  <p><%= ts('The Policy and Abuse committee looks after all of your concerns regarding content and user behavior which breach the
            Archive %{tos_link}. For technical help, please contact %{support_link}.',
             tos_link: (link_to ts("Terms of Service"), tos_path), support_link: (link_to ts("Support"),
                                                                                          new_feedback_report_path)).html_safe %></p>
@@ -27,7 +27,7 @@
     <li><%= ts('would like to lodge a DMCA claim - please review our %{dmca_link}', dmca_link:
             (link_to ts('DMCA Policy'), dmca_path)).html_safe %></li>
   </ul>
-  <p><%= ts('<strong>We can answer Abuse reports in %{list}.</strong> Please allow for an additional delay for responses
+  <p><%= ts('<strong>We can answer Policy and Abuse reports in %{list}.</strong> Please allow for an additional delay for responses
             in any language other than English.', list: @abuse_languages.map(&:name).to_sentence).html_safe %></p>
 </div>
 <%= form_for @abuse_report, class: "post" do |f| %>
